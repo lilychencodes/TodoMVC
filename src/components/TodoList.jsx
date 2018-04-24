@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
 import _ from 'lodash'
 
 import './TodoList.css'
 
 import TodoItem from './TodoItem'
+
+import debugRender from 'react-render-debugger'
 
 class TodoList extends Component {
   getList() {
@@ -21,11 +22,9 @@ class TodoList extends Component {
   }
 
   render() {
-    const list = this.getList()
-
     return (
       <div className='todolist'>
-        {list.map((todo, index) => {
+        {this.getList().map((todo, index) => {
           return (
             <TodoItem key={todo.id} todo={todo} index={index} />
           )
@@ -42,5 +41,8 @@ const mapStateToProps = (state, ownProps) => {
     currentTab
   }
 }
+
+// const connectedComponent = connect(mapStateToProps)(TodoList)
+// export default debugRender(connectedComponent)
 
 export default connect(mapStateToProps)(TodoList)

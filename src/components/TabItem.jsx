@@ -8,8 +8,6 @@ import {
 
 import './TabItem.css'
 
-import debugRender from 'react-render-debugger'
-
 class TabItem extends Component {
   constructor(props) {
     super(props)
@@ -45,4 +43,3 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(TabItem)
-// debugRender(TabItem)

@@ -78,8 +78,9 @@ class TodoItem extends Component {
   }
 
   render() {
-    const { todo, index } = this.props
+    const { todo } = this.props
     const { isEditing, showDelete } = this.state
+
     return (
       <div
         onMouseEnter={this.showDelete}
@@ -109,5 +110,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   deleteTodo
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(TodoItem)
-// debugRender(TodoItem)
+const connectedComponent = connect(null, mapDispatchToProps)(TodoItem)
+export default debugRender(connectedComponent)
+
+// export default connect(null, mapDispatchToProps)(TodoItem)

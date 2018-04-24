@@ -34,12 +34,10 @@ class Todo extends Component {
 
   render() {
     return (
-      <div>
-        <div className='main-content'>
-          <input className='input-box' placeholder='What needs to be done?' type='text' value={this.state.currentText} onChange={this.updateText} onKeyPress={this.addTodo} />
-          <TodoList />
-          {this.props.todoList.length > 0 && <Tabs />}
-        </div>
+      <div className='main-content'>
+        <input className='input-box' placeholder='What needs to be done?' type='text' value={this.state.currentText} onChange={this.updateText} onKeyPress={this.addTodo} />
+        <TodoList />
+        {this.props.todoList.length > 0 && <Tabs />}
       </div>
     )
   }

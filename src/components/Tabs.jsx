@@ -25,6 +25,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(Tabs)
+const connectedComponent = connect(mapStateToProps)(Tabs)
+export default debugRender(connectedComponent)
 
-// export default debugRender(Tabs)
+// export default connect(mapStateToProps)(Tabs)
