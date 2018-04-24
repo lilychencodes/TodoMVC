@@ -1,0 +1,18 @@
+.tab {
+  margin: 2px;
+  padding: 2px 4px;
+  border: 1px solid white;
+}
+
+.tab:hover {
+  cursor: pointer;
+  border: 1px solid lightpink;
+}
+
+.active {
+  border: 1px solid red;
+}
+
+.active:hover {
+  border: 1px solid red;
+}

@@ -2,12 +2,13 @@ const initialState = {
   todoList: [
     {text: 'Buy Cheese', id: 0.123, isFinished: false},
     {text: 'Finish code', id: 0.435, isFinished: true}
-  ]
+  ],
+  currentTab: 'All'
 };
 
 
 export default function reducer(state = initialState, action = {}) {
-  const { index, text, newText } = action
+  const { index, text, newText, tabName } = action
   const currentTodo = state.todoList[index]
 
   switch (action.type) {
@@ -33,7 +34,9 @@ export default function reducer(state = initialState, action = {}) {
         {text: currentTodo.text, id: currentTodo.id, isFinished: !currentTodo.isFinished},
         ...state.todoList.slice(index + 1)
       ]
-    return Object.assign({}, state, {todoList: newList})
+      return Object.assign({}, state, {todoList: newList})
+    case 'UPDATE_CURRENT_TAB':
+      return Object.assign({}, state, {currentTab: tabName})
     default:
       return state;
   }

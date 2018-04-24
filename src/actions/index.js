@@ -26,3 +26,10 @@ export const toggleFinishTodo = (index) => {
     index
   }
 }
+
+export const updateCurrentTab = (tabName) => {
+  return {
+    type: 'UPDATE_CURRENT_TAB',
+    tabName
+  }
+}

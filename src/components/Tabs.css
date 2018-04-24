@@ -1,0 +1,8 @@
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  color: #ccc;
+}

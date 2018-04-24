@@ -8,7 +8,8 @@ import {
 
 import './Todo.css'
 
-import TodoItem from './TodoItem'
+import TodoList from './TodoList'
+import Tabs from './Tabs'
 
 class Todo extends Component {
   constructor(props) {
@@ -32,18 +33,12 @@ class Todo extends Component {
   }
 
   render() {
-    const { todoList } = this.props
     return (
       <div>
         <div className='main-content'>
           <input className='input-box' placeholder='What needs to be done?' type='text' value={this.state.currentText} onChange={this.updateText} onKeyPress={this.addTodo} />
-          <div className='todolist'>
-            {todoList.map((todo, index) => {
-              return (
-                <TodoItem key={todo.id} todo={todo} index={index} />
-              )
-            })}
-          </div>
+          <TodoList />
+          {this.props.todoList.length > 0 && <Tabs />}
         </div>
       </div>
     )

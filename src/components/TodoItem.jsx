@@ -10,6 +10,8 @@ import {
 
 import './TodoItem.css'
 
+import debugRender from 'react-render-debugger'
+
 class TodoItem extends Component {
   constructor(props) {
     super(props)
@@ -101,14 +103,11 @@ class TodoItem extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
-}
-
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   updateTodo,
   toggleFinishTodo,
   deleteTodo
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoItem)
+export default connect(null, mapDispatchToProps)(TodoItem)
+// debugRender(TodoItem)
