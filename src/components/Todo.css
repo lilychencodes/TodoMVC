@@ -1,0 +1,15 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-box {
+  height: 20px;
+  width: 494px;
+}
+
+.todolist {
+  width: 500px;
+}

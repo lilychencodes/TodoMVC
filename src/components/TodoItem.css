@@ -1,0 +1,48 @@
+.flex-row-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.todo-item {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.finished {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.right-content {
+  width: 50px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.done {
+  font-weight: bold;
+  color: green;
+}
+
+.input-box {
+  height: 35px;
+  font-size: 14px;
+}
+
+.delete {
+  cursor: pointer;
+  color: red;
+}
